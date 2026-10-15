@@ -1,0 +1,307 @@
+<title>Dig Age Gizlilik Politikası</title>
+<meta name="description" content="Dig Age mobil oyununun gizlilik politikası / Dig Age privacy policy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --bg: #f4f8fc;
+    --paper: #ffffff;
+    --fg: #1d2a3a;
+    --muted: #5a6b80;
+    --line: #d9e3ee;
+    --sky: #2c76c9;
+    --sky-soft: #e3effb;
+    --sand: #e8892c;
+    --ok: #2f9a52;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1722; --paper: #162131; --fg: #e6edf5; --muted: #9db0c6; --line: #263549;
+      --sky: #79b4f2; --sky-soft: #1b2d44; --sand: #f2a65c; --ok: #6cc98b; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1722; --paper: #162131; --fg: #e6edf5; --muted: #9db0c6; --line: #263549;
+    --sky: #79b4f2; --sky-soft: #1b2d44; --sand: #f2a65c; --ok: #6cc98b; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font: 17px/1.6 "Source Sans 3", -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding-inline: 16px; padding-block: 0 48px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    padding-block: 28px 20px; border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--sky); color: #fff; font: 600 22px/1 "Fredoka", sans-serif;
+  }
+  .brand b { display: block; font: 600 22px/1.1 "Fredoka", "Source Sans 3", sans-serif; }
+  .brand span { color: var(--muted); font-size: 14px; }
+  .lang { display: flex; gap: 4px; background: var(--sky-soft); padding: 4px; border-radius: 999px; }
+  .lang button {
+    border: 0; background: transparent; color: var(--fg); font: 600 14px/1 "Source Sans 3", sans-serif;
+    padding: 8px 14px; border-radius: 999px; cursor: pointer; letter-spacing: .04em;
+  }
+  .lang button[aria-pressed="true"] { background: var(--paper); color: var(--sky); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+  h1 { font: 600 clamp(28px, 6vw, 38px)/1.15 "Fredoka", "Source Sans 3", sans-serif; text-wrap: balance; margin: 28px 0 8px; }
+  .meta { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+  .summary {
+    background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--ok);
+    border-radius: 10px; padding: 16px 20px; margin-bottom: 8px;
+  }
+  .summary ul { margin: 8px 0 0; padding-left: 20px; }
+  .summary li { margin: 4px 0; }
+  h2 {
+    font: 600 21px/1.3 "Fredoka", "Source Sans 3", sans-serif; text-wrap: balance;
+    margin: 36px 0 8px; display: flex; gap: 10px; align-items: baseline;
+  }
+  h2 .n { color: var(--sand); font-variant-numeric: tabular-nums; min-width: 1.6em; }
+  p, li { max-width: 68ch; }
+  p { margin: 8px 0; }
+  ul { padding-left: 22px; }
+  a { color: var(--sky); }
+  .table-wrap { overflow-x: auto; margin: 12px 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 15px; background: var(--paper); }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .contact {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    background: var(--sky-soft); border-radius: 10px; padding: 14px 18px; margin: 12px 0;
+  }
+  .contact code { font: 600 16px/1.3 ui-monospace, "SF Mono", Menlo, monospace; user-select: all; overflow-wrap: anywhere; }
+  .contact button {
+    border: 1px solid var(--line); background: var(--paper); color: var(--fg); border-radius: 8px;
+    padding: 6px 12px; font: 600 14px/1 "Source Sans 3", sans-serif; cursor: pointer;
+  }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">D</div>
+      <div><b>Dig Age</b><span id="tagline">Kazı ve eşleştirme bulmacası</span></div>
+    </div>
+    <div class="lang" role="group" aria-label="Dil / Language">
+      <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <!-- ============================ TÜRKÇE ============================ -->
+  <article id="tr" lang="tr">
+    <h1>Gizlilik Politikası</h1>
+    <p class="meta">Son güncelleme: 14 Ekim 2026 · “Dig Age” oyununun iOS (App Store) ve Android (Google Play) sürümleri için geçerlidir.</p>
+
+    <div class="summary">
+      <strong>Kısaca</strong>
+      <ul>
+        <li>Adını, e-postanı ya da telefon numaranı istemeyiz. Konumuna, rehberine, fotoğraflarına ve mikrofonuna erişmeyiz.</li>
+        <li>Oyun ölçümleri yalnızca sen “Kabul et” dersen gönderilir. Tercihini istediğin zaman Ayarlar &gt; Gizlilik tercihleri’nden değiştirebilirsin.</li>
+        <li>Verilerini satmayız.</li>
+      </ul>
+    </div>
+
+    <h2><span class="n">1</span>Veri sorumlusu ve iletişim</h2>
+    <p>Dig Age, bireysel geliştirici Kemal Eyüp Çam tarafından geliştirilen bir mobil oyundur. Bu politika kapsamındaki veri sorumlusu Kemal Eyüp Çam’dır. Gizlilikle ilgili her soru, talep ve silme isteği için:</p>
+    <div class="contact"><code class="email">kemaleyupcam@icloud.com</code><button type="button" class="copy">Kopyala</button></div>
+
+    <h2><span class="n">2</span>Toplanan veriler</h2>
+    <p>Oyun ilk açılışta rastgele bir <strong>kurulum kimliği</strong> oluşturur. Bu kimlik seni tanımlamaz; oyunu silip yeniden kurduğunda yenisi oluşur. Bu kimlikle birlikte şunlar kaydedilir:</p>
+    <ul>
+      <li>Oyun olayları: oynanan bölüm, hamle ve sonuç, ödül ve güçlendirici kullanımı, hangi ürünün satın alındığı (ödeme bilgisi olmadan).</li>
+      <li>Cihaz bilgisi: cihaz modeli, işletim sistemi sürümü, oyun sürümü ve dil.</li>
+    </ul>
+    <p>Kazı Birlikleri ve turnuvalarla ilgili veriler 7. bölümde, reklamlarla ilgili veriler 4. bölümde anlatılır.</p>
+
+    <h2><span class="n">3</span>Amaç ve analitik</h2>
+    <p>Bu bilgileri yalnızca oyunu iyileştirmek için kullanırız: zor bölümleri dengelemek, hataları bulmak ve hangi özelliklerin sevildiğini anlamak.</p>
+    <ul>
+      <li><strong>“Kabul et”</strong> seçersen ölçümler analiz hizmetimiz <strong>PostHog</strong>’a (Avrupa Birliği sunucuları) gönderilir. Bağlantı yoksa cihazda bekler ve sonra yeniden denenir.</li>
+      <li><strong>“Sadece gerekli”</strong> seçersen olaylar yalnızca cihazında kalır ve hiçbir yere gönderilmez.</li>
+    </ul>
+    <p>Hukuki dayanak: analitik ve kişiselleştirilmiş reklam için açık rızan; oyunun ve satın almaların çalışması ile birlik özellikleri için hizmetin sunulması (sözleşmenin ifası).</p>
+
+    <h2><span class="n">4</span>Reklamlar</h2>
+    <p>Dig Age’de zorunlu reklam yoktur. İsteğe bağlı ödüllü reklamlar <strong>Unity Ads</strong> ile gösterilir. Reklamlar yalnızca onay verirsen (iPhone’da ayrıca uygulama izleme izni verirsen) ilgi alanlarına göre kişiselleştirilir; aksi hâlde kişiselleştirilmez. Android’de reklam kimliğini Ayarlar &gt; Gizlilik &gt; Reklamlar’dan silebilir ya da sıfırlayabilirsin. Unity, reklamı göstermek ve ölçmek için cihaz bilgilerini <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">kendi gizlilik politikasına</a> göre işler.</p>
+
+    <h2><span class="n">5</span>Satın almalar</h2>
+    <p>Oyun içi satın almalar isteğe bağlıdır. Ödemeleri iPhone’da <strong>Apple</strong> (App Store), Android’de <strong>Google</strong> (Google Play) işler. Oyun kart ya da ödeme bilgilerini hiçbir zaman görmez; yalnızca hangi ürünün alındığını öğrenir. iPhone’da önceki alımlarını Ayarlar’daki “Alımları geri yükle” düğmesiyle geri getirebilirsin; Android’de alımlar Google hesabınla otomatik geri gelir.</p>
+
+    <h2><span class="n">6</span>Cihaz yedeği</h2>
+    <p>Telefon değiştirdiğinde ilerlemen kaybolmasın diye oyun kaydın yedeklenir: iPhone’da Apple kimliğine bağlı <strong>iCloud</strong> deposuna, Android’de Google hesabına bağlı <strong>Android yedeklemesine</strong> (Google Drive). Bu yedeği yalnızca sen ve Apple ya da Google saklar; biz göremeyiz. iPhone’da Ayarlar &gt; Apple kimliği &gt; iCloud’dan, Android’de Ayarlar &gt; Sistem &gt; Yedekleme’den kapatabilirsin.</p>
+
+    <h2><span class="n">7</span>Kazı Birlikleri ve turnuvalar</h2>
+    <p>Birliklere katıldığında, can ya da hamle istediğinde veya turnuvaya girdiğinde senin için <strong>anonim bir oyun hesabı</strong> oluşturulur; e-posta ya da şifre istenmez. Bu hesap ve şu bilgiler <strong>Supabase</strong> altyapısında (Avrupa sunucuları) saklanır:</p>
+    <ul>
+      <li>Seçtiğin takma ad ve amblem, seviyen, birlik üyeliğin;</li>
+      <li>Can ve hamle istekleri ile hediyeler, birlik akışındaki etkinlikler;</li>
+      <li>Haftalık sefer ve turnuva puanların, davet kodların;</li>
+      <li>Bir oyuncu ya da birlik hakkında yaptığın şikâyetler.</li>
+    </ul>
+    <p>Takma adın, amblemin, seviyen ve puanların diğer oyunculara görünür. Lütfen gerçek adını ya da kişisel bilgilerini takma ad olarak kullanma. Uygunsuz adlar şikâyet üzerine değiştirilebilir ya da kaldırılabilir.</p>
+
+    <h2><span class="n">8</span>Saklama ve silme</h2>
+    <ul>
+      <li>Analiz verileri en fazla 24 ay saklanır, sonra silinir.</li>
+      <li>Birlik hesabın, oyunu kullandığın sürece saklanır. Birlikten oyun içinden her zaman ayrılabilirsin.</li>
+      <li>Gönderilmiş verilerinin ya da birlik hesabının silinmesini istersen yukarıdaki adrese yaz. Kimliğini doğrulamamız için takma adını ve oyundaki davet kodunu ekle. Talebini en geç 30 gün içinde yerine getiririz.</li>
+      <li>Oyunu silmek cihazdaki tüm oyun verilerini de siler (cihaz yedeği 6. bölümde anlatıldığı gibi senin kontrolündedir).</li>
+    </ul>
+
+    <h2><span class="n">9</span>Hakların</h2>
+    <p>KVKK (6698 sayılı Kanun, md. 11) ve Avrupa’daki oyuncular için GDPR kapsamında; verilerine erişme, düzeltilmesini ya da silinmesini isteme, işlenmesine itiraz etme ve verdiğin onayı geri çekme hakların vardır. Onayını Ayarlar &gt; Gizlilik tercihleri’nden tek dokunuşla geri çekebilirsin. Talebini yanıtlamamızdan memnun kalmazsan Kişisel Verileri Koruma Kurumu’na ya da ülkendeki veri koruma otoritesine başvurabilirsin.</p>
+
+    <h2><span class="n">10</span>Hizmet sağlayıcılar ve yurt dışı aktarım</h2>
+    <p>Oyunu çalıştırmak için aşağıdaki hizmetleri kullanırız. Sunucuları Türkiye dışında olduğundan verilerin bu ülkelere aktarılır; aktarım yalnızca bu politikadaki amaçlarla ve sağlayıcıların kendi veri koruma güvenceleri altında yapılır.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Hizmet</th><th>Ne için</th><th>Konum</th></tr></thead>
+        <tbody>
+          <tr><td>PostHog</td><td>Oyun ölçümleri (yalnızca onayla)</td><td>Avrupa Birliği</td></tr>
+          <tr><td>Supabase</td><td>Kazı Birlikleri, turnuvalar, davetler</td><td>Avrupa Birliği</td></tr>
+          <tr><td>Unity Ads</td><td>İsteğe bağlı ödüllü reklamlar</td><td>ABD ve diğer</td></tr>
+          <tr><td>Apple</td><td>iPhone’da satın almalar, iCloud yedeği, bildirimler</td><td>ABD ve diğer</td></tr>
+          <tr><td>Google</td><td>Android’de satın almalar (Google Play), Android yedeklemesi, bildirimler</td><td>ABD ve diğer</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2><span class="n">11</span>Çocuklar</h2>
+    <p>Dig Age çocukları hedef alan veri toplamaz ve çocuklardan bilerek kişisel veri toplamaz. Çocuğunun veri paylaştığını düşünen ebeveynler bize yazabilir; ilgili verileri sileriz.</p>
+
+    <h2><span class="n">12</span>Değişiklikler</h2>
+    <p>Bu politikayı değiştirirsek bu sayfadaki tarihi güncelleriz ve önemli değişikliklerde oyun tercihini yeniden sorar.</p>
+  </article>
+
+  <!-- ============================ ENGLISH ============================ -->
+  <article id="en" lang="en" hidden>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: October 14, 2026 · Applies to the iOS (App Store) and Android (Google Play) versions of “Dig Age”.</p>
+
+    <div class="summary">
+      <strong>In short</strong>
+      <ul>
+        <li>We never ask for your name, e-mail or phone number. We do not access your location, contacts, photos or microphone.</li>
+        <li>Gameplay measurements are sent only if you tap “Accept”. You can change your choice anytime in Settings &gt; Privacy preferences.</li>
+        <li>We do not sell your data.</li>
+      </ul>
+    </div>
+
+    <h2><span class="n">1</span>Who we are and how to reach us</h2>
+    <p>Dig Age is a mobile game developed by the independent developer Kemal Eyüp Çam, who is the data controller under this policy. For any privacy question, request or deletion request, write to:</p>
+    <div class="contact"><code class="email">kemaleyupcam@icloud.com</code><button type="button" class="copy">Copy</button></div>
+
+    <h2><span class="n">2</span>What we collect</h2>
+    <p>On first launch the game creates a random <strong>install ID</strong>. It does not identify you, and a new one is created if you reinstall the game. Together with this ID we record:</p>
+    <ul>
+      <li>Gameplay events: levels played, moves and results, reward and booster use, and which item was bought (without any payment details).</li>
+      <li>Device information: device model, OS version, game version and language.</li>
+    </ul>
+    <p>Data for Teams and tournaments is described in section 7, and data used for ads in section 4.</p>
+
+    <h2><span class="n">3</span>Why we use it, and analytics</h2>
+    <p>We use this information only to improve the game: balancing hard levels, finding bugs and learning which features players enjoy.</p>
+    <ul>
+      <li>If you choose <strong>“Accept”</strong>, measurements are sent to our analytics service <strong>PostHog</strong> (European Union servers). Without a connection they wait on the device and are retried later.</li>
+      <li>If you choose <strong>“Essentials only”</strong>, events stay on your device and are never sent.</li>
+    </ul>
+    <p>Legal basis: your consent for analytics and personalised ads; performance of the service for running the game, purchases and team features.</p>
+
+    <h2><span class="n">4</span>Ads</h2>
+    <p>Dig Age has no forced ads. Optional rewarded ads are shown through <strong>Unity Ads</strong>. Ads are personalised only if you give consent (and, on iPhone, also allow app tracking); otherwise they are not personalised. On Android you can delete or reset your advertising ID in Settings &gt; Privacy &gt; Ads. Unity processes device information to show and measure ads under <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">its own privacy policy</a>.</p>
+
+    <h2><span class="n">5</span>Purchases</h2>
+    <p>In-app purchases are optional. Payments are handled by <strong>Apple</strong> (App Store) on iPhone and by <strong>Google</strong> (Google Play) on Android. The game never sees your card or payment details; it only learns which item was bought. On iPhone you can bring back earlier purchases with “Restore purchases” in Settings; on Android they come back automatically with your Google account.</p>
+
+    <h2><span class="n">6</span>Device backup</h2>
+    <p>So that you do not lose your progress when you change phones, your save is backed up: on iPhone to the <strong>iCloud</strong> storage of your Apple Account, on Android to the <strong>Android backup</strong> (Google Drive) of your Google account. Only you and Apple or Google hold this backup; we cannot see it. You can turn it off in iPhone Settings &gt; Apple Account &gt; iCloud, or in Android Settings &gt; System &gt; Backup.</p>
+
+    <h2><span class="n">7</span>Teams and tournaments</h2>
+    <p>When you join a team, ask for lives or moves, or enter a tournament, an <strong>anonymous game account</strong> is created for you; no e-mail or password is needed. This account and the following are stored with <strong>Supabase</strong> (European servers):</p>
+    <ul>
+      <li>The nickname and emblem you choose, your level and team membership;</li>
+      <li>Life and move requests and gifts, and activity in the team feed;</li>
+      <li>Weekly expedition and tournament scores, and your invite codes;</li>
+      <li>Reports you make about a player or a team.</li>
+    </ul>
+    <p>Your nickname, emblem, level and scores are visible to other players. Please do not use your real name or personal details as a nickname. Inappropriate names may be changed or removed after a report.</p>
+
+    <h2><span class="n">8</span>Retention and deletion</h2>
+    <ul>
+      <li>Analytics data is kept for at most 24 months and then deleted.</li>
+      <li>Your team account is kept while you use the game. You can leave a team in the game at any time.</li>
+      <li>To have sent data or your team account deleted, write to the address above. Include your nickname and your in-game invite code so we can verify it is you. We act on requests within 30 days.</li>
+      <li>Uninstalling the game deletes all game data on your device (the device backup stays under your control, as described in section 6).</li>
+    </ul>
+
+    <h2><span class="n">9</span>Your rights</h2>
+    <p>Under the GDPR (for players in Europe), Turkey’s KVKK and similar laws, you have the right to access your data, ask for it to be corrected or deleted, object to its processing and withdraw your consent. You can withdraw consent with one tap in Settings &gt; Privacy preferences. If you are not satisfied with our answer, you can complain to your local data protection authority.</p>
+
+    <h2><span class="n">10</span>Service providers and international transfers</h2>
+    <p>We use the services below to run the game. Their servers are outside Turkey, so your data is transferred to these countries, only for the purposes in this policy and under each provider’s own data protection safeguards.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Service</th><th>Used for</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>PostHog</td><td>Gameplay measurements (only with consent)</td><td>European Union</td></tr>
+          <tr><td>Supabase</td><td>Teams, tournaments, invites</td><td>European Union</td></tr>
+          <tr><td>Unity Ads</td><td>Optional rewarded ads</td><td>USA and others</td></tr>
+          <tr><td>Apple</td><td>Purchases, iCloud backup and notifications on iPhone</td><td>USA and others</td></tr>
+          <tr><td>Google</td><td>Purchases (Google Play), Android backup and notifications on Android</td><td>USA and others</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2><span class="n">11</span>Children</h2>
+    <p>Dig Age does not target children with data collection and does not knowingly collect personal data from children. Parents who think their child has shared data can write to us and we will delete it.</p>
+
+    <h2><span class="n">12</span>Changes</h2>
+    <p>If we change this policy we update the date on this page, and for important changes the game will ask for your choice again.</p>
+  </article>
+
+  <footer id="foot">Dig Age · Kemal Eyüp Çam · kemaleyupcam@icloud.com</footer>
+</div>
+
+<script>
+  (function () {
+    var tagline = { tr: "Kazı ve eşleştirme bulmacası", en: "A dig-and-match puzzle game" };
+    var copied = { tr: "Kopyalandı", en: "Copied" };
+    var copyLabel = { tr: "Kopyala", en: "Copy" };
+    function show(lang) {
+      document.getElementById("tr").hidden = lang !== "tr";
+      document.getElementById("en").hidden = lang !== "en";
+      document.documentElement.lang = lang;
+      document.getElementById("tagline").textContent = tagline[lang];
+      document.querySelectorAll(".lang button").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+      });
+    }
+    var start = location.hash === "#en" ? "en" : location.hash === "#tr" ? "tr"
+      : ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+    show(start);
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+    document.querySelectorAll(".copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var lang = btn.closest("article").id;
+        var text = btn.previousElementSibling.textContent;
+        var done = function () { btn.textContent = copied[lang]; setTimeout(function () { btn.textContent = copyLabel[lang]; }, 1600); };
+        try {
+          navigator.clipboard.writeText(text).then(done, function () { selectText(btn.previousElementSibling); });
+        } catch (e) { selectText(btn.previousElementSibling); }
+      });
+    });
+    function selectText(el) {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+  })();
+</script>
