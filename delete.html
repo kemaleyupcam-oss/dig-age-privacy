@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dig Age Hesap Silme</title>
+<meta name="description" content="Dig Age oyun hesabını ve verilerini silme / Delete your Dig Age account and data">
+<!-- 17 Eki 2026 denetim (SEC-2): Google Play hesap silme kurali uygulama ici yolun yaninda bir web
+     baglantisi ister (Data safety > "Delete account URL"). Bu sayfa o baglantidir. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --bg: #f4f8fc; --paper: #ffffff; --fg: #1d2a3a; --muted: #5a6b80; --line: #d9e3ee;
+    --sky: #2c76c9; --sky-soft: #e3effb; --sand: #e8892c; --ok: #2f9a52;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1722; --paper: #162131; --fg: #e6edf5; --muted: #9db0c6; --line: #263549;
+      --sky: #79b4f2; --sky-soft: #1b2d44; --sand: #f2a65c; --ok: #6cc98b; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1722; --paper: #162131; --fg: #e6edf5; --muted: #9db0c6; --line: #263549;
+    --sky: #79b4f2; --sky-soft: #1b2d44; --sand: #f2a65c; --ok: #6cc98b; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg); margin: 0;
+    font: 17px/1.6 "Source Sans 3", -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding-inline: 16px; padding-block: 0 48px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  header {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+    padding-block: 28px 20px; border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--sky); color: #fff; font: 600 22px/1 "Fredoka", sans-serif;
+  }
+  .brand b { display: block; font: 600 22px/1.1 "Fredoka", "Source Sans 3", sans-serif; }
+  .brand span { color: var(--muted); font-size: 14px; }
+  .lang { display: flex; gap: 4px; background: var(--sky-soft); padding: 4px; border-radius: 999px; }
+  .lang button {
+    border: 0; background: transparent; color: var(--fg); font: 600 14px/1 "Source Sans 3", sans-serif;
+    padding: 8px 14px; border-radius: 999px; cursor: pointer; letter-spacing: .04em;
+  }
+  .lang button[aria-pressed="true"] { background: var(--paper); color: var(--sky); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+  h1 { font: 600 clamp(28px, 6vw, 38px)/1.15 "Fredoka", "Source Sans 3", sans-serif; text-wrap: balance; margin: 28px 0 8px; }
+  h2 { font: 600 21px/1.3 "Fredoka", "Source Sans 3", sans-serif; margin: 32px 0 8px; }
+  .meta { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--ok);
+    border-radius: 10px; padding: 16px 20px; margin: 12px 0;
+  }
+  ol, ul { padding-left: 22px; }
+  li { margin: 4px 0; max-width: 68ch; }
+  p { margin: 8px 0; max-width: 68ch; }
+  a { color: var(--sky); }
+  .contact {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    background: var(--sky-soft); border-radius: 10px; padding: 14px 18px; margin: 12px 0;
+  }
+  .contact code { font: 600 16px/1.3 ui-monospace, "SF Mono", Menlo, monospace; user-select: all; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">D</div>
+      <div><b>Dig Age</b><span id="tagline">Hesap ve veri silme</span></div>
+    </div>
+    <div class="lang" role="group" aria-label="Dil / Language">
+      <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <article id="tr" lang="tr">
+    <h1>Dig Age hesabını sil</h1>
+    <p class="meta">Geliştirici: Kemal Eyüp Çam · Son güncelleme: 17 Ekim 2026</p>
+
+    <div class="card">
+      <h2>Oyunun içinden (en hızlı yol)</h2>
+      <ol>
+        <li>Dig Age’i aç ve ana menüde <strong>Ayarlar</strong>’a dokun.</li>
+        <li><strong>Hesap ve yedek</strong>’e dokun.</li>
+        <li><strong>Hesabımı sil</strong>’e, ardından <strong>Hesabımı kalıcı olarak sil</strong>’e dokun.</li>
+      </ol>
+      <p>Silme hemen gerçekleşir; internet bağlantısı gerekir.</p>
+    </div>
+
+    <h2>Uygulamayı açamıyorsan</h2>
+    <p>Aşağıdaki adrese “Hesap silme” konulu bir e-posta gönder. Hesabını bulabilmemiz için kazıcı adını ve, varsa, oyundaki davet kodunu ya da hesaba eklediğin e-posta adresini yaz. Talebini en geç 30 gün içinde yerine getirir ve sana yanıt veririz.</p>
+    <div class="contact"><code>kemaleyupcam@icloud.com</code></div>
+
+    <h2>Ne silinir?</h2>
+    <ul>
+      <li>Oyun hesabın ve kullanıcı kimliğin, kazıcı adın ve amblemin;</li>
+      <li>Birlik üyeliğin (birliğin lideriysen liderlik başka bir üyeye geçer; son üyeysen birlik kapanır), can ve hamle istekleri ile hediyeler;</li>
+      <li>Davet kodun ve davetlerin, sefer ve turnuva kayıtların, yaptığın şikâyetler;</li>
+      <li>Sunucudaki bulut kaydın ve hesaba eklediğin e-posta ya da Google bağlantısı.</li>
+    </ul>
+
+    <h2>Ne kalır?</h2>
+    <ul>
+      <li>Telefonundaki oyun ilerlemen (oyunu silersen o da silinir).</li>
+      <li>Hesaba bağlı olmayan, rastgele kurulum kimliğiyle tutulan oyun ölçümleri en fazla 24 ay saklanır, sonra silinir.</li>
+      <li>Satın alma kayıtları Apple ya da Google’da, onların kurallarına göre tutulur.</li>
+    </ul>
+    <p>Ayrıntılar için <a href="index.html">gizlilik politikası</a>.</p>
+  </article>
+
+  <article id="en" lang="en" hidden>
+    <h1>Delete your Dig Age account</h1>
+    <p class="meta">Developer: Kemal Eyüp Çam · Last updated: October 17, 2026</p>
+
+    <div class="card">
+      <h2>In the game (fastest)</h2>
+      <ol>
+        <li>Open Dig Age and tap <strong>Settings</strong> on the main menu.</li>
+        <li>Tap <strong>Account &amp; backup</strong>.</li>
+        <li>Tap <strong>Delete my account</strong>, then <strong>Delete my account for good</strong>.</li>
+      </ol>
+      <p>Deletion happens right away; an internet connection is needed.</p>
+    </div>
+
+    <h2>If you can’t open the app</h2>
+    <p>Send an email with the subject “Account deletion” to the address below. So we can find your account, include your digger name and, if you have them, your in-game invite code or the email address you added to the account. We act on requests within 30 days and reply to you.</p>
+    <div class="contact"><code>kemaleyupcam@icloud.com</code></div>
+
+    <h2>What is deleted?</h2>
+    <ul>
+      <li>Your game account and user ID, your digger name and emblem;</li>
+      <li>Your team membership (if you lead a team, leadership passes to another member; if you are the last member, the team is closed), and life and move requests and gifts;</li>
+      <li>Your invite code and invites, expedition and tournament entries, and reports you made;</li>
+      <li>Your cloud save on our server and the email or Google link on your account.</li>
+    </ul>
+
+    <h2>What stays?</h2>
+    <ul>
+      <li>The game progress on your phone (uninstalling the game deletes it too).</li>
+      <li>Game measurements kept under a random install ID and not linked to an account are kept for at most 24 months and then deleted.</li>
+      <li>Purchase records are kept by Apple or Google under their own rules.</li>
+    </ul>
+    <p>More details in the <a href="index.html">privacy policy</a>.</p>
+  </article>
+
+  <footer>Dig Age · Kemal Eyüp Çam · kemaleyupcam@icloud.com</footer>
+</div>
+
+<script>
+  (function () {
+    var tagline = { tr: "Hesap ve veri silme", en: "Account and data deletion" };
+    function show(lang) {
+      document.getElementById("tr").hidden = lang !== "tr";
+      document.getElementById("en").hidden = lang !== "en";
+      document.documentElement.lang = lang;
+      document.getElementById("tagline").textContent = tagline[lang];
+      document.title = lang === "tr" ? "Dig Age Hesap Silme" : "Delete Dig Age Account";
+      document.querySelectorAll(".lang button").forEach(function (b) {
+        b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+      });
+    }
+    var start = location.hash === "#en" ? "en" : location.hash === "#tr" ? "tr"
+      : ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+    show(start);
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+  })();
+</script>
+</body>
+</html>

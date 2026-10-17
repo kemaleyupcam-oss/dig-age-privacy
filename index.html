@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dig Age Gizlilik Politikası</title>
 <meta name="description" content="Dig Age mobil oyununun gizlilik politikası / Dig Age privacy policy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,6 +86,8 @@
   }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <header>
@@ -95,15 +102,20 @@
   </header>
 
   <!-- ============================ TÜRKÇE ============================ -->
+  <!-- 17 Eki 2026 denetim (SEC-11/FTUE-1/SEC-2): kazici adi + oyun hesabi, istege bagli e-posta ve
+       Google, bulut kaydi, ayri olcum/reklam onayi, hata kayitlari ve uygulama ici hesap silme eklendi.
+       Uygulama ici kisa surum: tools/loc/add_audit_account.py (privacy.body.v3); ikisi birlikte guncellenir. -->
   <article id="tr" lang="tr">
     <h1>Gizlilik Politikası</h1>
-    <p class="meta">Son güncelleme: 14 Ekim 2026 · “Dig Age” oyununun iOS (App Store) ve Android (Google Play) sürümleri için geçerlidir.</p>
+    <p class="meta">Son güncelleme: 17 Ekim 2026 · “Dig Age” oyununun iOS (App Store) ve Android (Google Play) sürümleri için geçerlidir.</p>
 
     <div class="summary">
       <strong>Kısaca</strong>
       <ul>
-        <li>Adını, e-postanı ya da telefon numaranı istemeyiz. Konumuna, rehberine, fotoğraflarına ve mikrofonuna erişmeyiz.</li>
-        <li>Oyun ölçümleri yalnızca sen “Kabul et” dersen gönderilir. Tercihini istediğin zaman Ayarlar &gt; Gizlilik tercihleri’nden değiştirebilirsin.</li>
+        <li>İlk bölümden sonra herkese görünen bir <strong>kazıcı adı</strong> seçersin; birlik, turnuva ve sıralamalar için bir oyun hesabı açılır. Gerçek adını kullanma.</li>
+        <li><strong>E-posta isteğe bağlıdır</strong>; yalnızca ilerleme yedeği ve yeni cihazda hesabına dönmek için kullanılır. Konumuna, rehberine, fotoğraflarına ve mikrofonuna erişmeyiz.</li>
+        <li>Oyun ölçümleri ve kişiselleştirilmiş reklam yalnızca onay verirsen açılır; ikisini <strong>ayrı ayrı</strong> seçebilirsin (Ayarlar &gt; Gizlilik tercihleri).</li>
+        <li>Hesabını ve sunucudaki tüm verilerini oyunda <strong>Ayarlar &gt; Hesap ve yedek &gt; Hesabımı sil</strong> ile istediğin an silebilirsin.</li>
         <li>Verilerini satmayız.</li>
       </ul>
     </div>
@@ -112,51 +124,53 @@
     <p>Dig Age, bireysel geliştirici Kemal Eyüp Çam tarafından geliştirilen bir mobil oyundur. Bu politika kapsamındaki veri sorumlusu Kemal Eyüp Çam’dır. Gizlilikle ilgili her soru, talep ve silme isteği için:</p>
     <div class="contact"><code class="email">kemaleyupcam@icloud.com</code><button type="button" class="copy">Kopyala</button></div>
 
-    <h2><span class="n">2</span>Toplanan veriler</h2>
-    <p>Oyun ilk açılışta rastgele bir <strong>kurulum kimliği</strong> oluşturur. Bu kimlik seni tanımlamaz; oyunu silip yeniden kurduğunda yenisi oluşur. Bu kimlikle birlikte şunlar kaydedilir:</p>
+    <h2><span class="n">2</span>Oyun hesabı ve kazıcı adı</h2>
+    <p>İlk bölümü bitirip gizlilik tercihini yaptıktan sonra bir <strong>kazıcı adı</strong> seçersin. Bunun için <strong>Supabase</strong> altyapısında (Avrupa sunucuları) senin için bir oyun hesabı ve rastgele bir kullanıcı kimliği oluşturulur. Hesapta şunlar tutulur:</p>
     <ul>
-      <li>Oyun olayları: oynanan bölüm, hamle ve sonuç, ödül ve güçlendirici kullanımı, hangi ürünün satın alındığı (ödeme bilgisi olmadan).</li>
-      <li>Cihaz bilgisi: cihaz modeli, işletim sistemi sürümü, oyun sürümü ve dil.</li>
-    </ul>
-    <p>Kazı Birlikleri ve turnuvalarla ilgili veriler 7. bölümde, reklamlarla ilgili veriler 4. bölümde anlatılır.</p>
-
-    <h2><span class="n">3</span>Amaç ve analitik</h2>
-    <p>Bu bilgileri yalnızca oyunu iyileştirmek için kullanırız: zor bölümleri dengelemek, hataları bulmak ve hangi özelliklerin sevildiğini anlamak.</p>
-    <ul>
-      <li><strong>“Kabul et”</strong> seçersen ölçümler analiz hizmetimiz <strong>PostHog</strong>’a (Avrupa Birliği sunucuları) gönderilir. Bağlantı yoksa cihazda bekler ve sonra yeniden denenir.</li>
-      <li><strong>“Sadece gerekli”</strong> seçersen olaylar yalnızca cihazında kalır ve hiçbir yere gönderilmez.</li>
-    </ul>
-    <p>Hukuki dayanak: analitik ve kişiselleştirilmiş reklam için açık rızan; oyunun ve satın almaların çalışması ile birlik özellikleri için hizmetin sunulması (sözleşmenin ifası).</p>
-
-    <h2><span class="n">4</span>Reklamlar</h2>
-    <p>Dig Age’de zorunlu reklam yoktur. İsteğe bağlı ödüllü reklamlar <strong>Unity Ads</strong> ile gösterilir. Reklamlar yalnızca onay verirsen (iPhone’da ayrıca uygulama izleme izni verirsen) ilgi alanlarına göre kişiselleştirilir; aksi hâlde kişiselleştirilmez. Android’de reklam kimliğini Ayarlar &gt; Gizlilik &gt; Reklamlar’dan silebilir ya da sıfırlayabilirsin. Unity, reklamı göstermek ve ölçmek için cihaz bilgilerini <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">kendi gizlilik politikasına</a> göre işler.</p>
-
-    <h2><span class="n">5</span>Satın almalar</h2>
-    <p>Oyun içi satın almalar isteğe bağlıdır. Ödemeleri iPhone’da <strong>Apple</strong> (App Store), Android’de <strong>Google</strong> (Google Play) işler. Oyun kart ya da ödeme bilgilerini hiçbir zaman görmez; yalnızca hangi ürünün alındığını öğrenir. iPhone’da önceki alımlarını Ayarlar’daki “Alımları geri yükle” düğmesiyle geri getirebilirsin; Android’de alımlar Google hesabınla otomatik geri gelir.</p>
-
-    <h2><span class="n">6</span>Cihaz yedeği</h2>
-    <p>Telefon değiştirdiğinde ilerlemen kaybolmasın diye oyun kaydın yedeklenir: iPhone’da Apple kimliğine bağlı <strong>iCloud</strong> deposuna, Android’de Google hesabına bağlı <strong>Android yedeklemesine</strong> (Google Drive). Bu yedeği yalnızca sen ve Apple ya da Google saklar; biz göremeyiz. iPhone’da Ayarlar &gt; Apple kimliği &gt; iCloud’dan, Android’de Ayarlar &gt; Sistem &gt; Yedekleme’den kapatabilirsin.</p>
-
-    <h2><span class="n">7</span>Kazı Birlikleri ve turnuvalar</h2>
-    <p>Birliklere katıldığında, can ya da hamle istediğinde veya turnuvaya girdiğinde senin için <strong>anonim bir oyun hesabı</strong> oluşturulur; e-posta ya da şifre istenmez. Bu hesap ve şu bilgiler <strong>Supabase</strong> altyapısında (Avrupa sunucuları) saklanır:</p>
-    <ul>
-      <li>Seçtiğin takma ad ve amblem, seviyen, birlik üyeliğin;</li>
-      <li>Can ve hamle istekleri ile hediyeler, birlik akışındaki etkinlikler;</li>
-      <li>Haftalık sefer ve turnuva puanların, davet kodların;</li>
+      <li>Kazıcı adın (benzersizdir) ve amblemin, seviyen, kazı sayın ve son görülme zamanın;</li>
+      <li>Birlik üyeliğin, can ve hamle istekleri ile hediyeler, birlik akışındaki etkinlikler;</li>
+      <li>Haftalık sefer ve turnuva puanların, davet kodun ve davetlerin;</li>
       <li>Bir oyuncu ya da birlik hakkında yaptığın şikâyetler.</li>
     </ul>
-    <p>Takma adın, amblemin, seviyen ve puanların diğer oyunculara görünür. Lütfen gerçek adını ya da kişisel bilgilerini takma ad olarak kullanma. Uygunsuz adlar şikâyet üzerine değiştirilebilir ya da kaldırılabilir.</p>
+    <p>Kazıcı adın, amblemin, seviyen ve puanların diğer oyunculara görünür. Lütfen gerçek adını ya da kişisel bilgilerini kazıcı adı olarak kullanma; uygunsuz adlar şikâyet üzerine değiştirilebilir ya da kaldırılabilir. Bu hesap birlik, turnuva ve sıralama özellikleri için gereklidir ve ölçüm tercihinden bağımsızdır (hukuki dayanak: hizmetin sunulması).</p>
 
-    <h2><span class="n">8</span>Saklama ve silme</h2>
+    <h2><span class="n">3</span>E-posta ve Google ile bağlama (isteğe bağlı)</h2>
     <ul>
-      <li>Analiz verileri en fazla 24 ay saklanır, sonra silinir.</li>
-      <li>Birlik hesabın, oyunu kullandığın sürece saklanır. Birlikten oyun içinden her zaman ayrılabilirsin.</li>
-      <li>Gönderilmiş verilerinin ya da birlik hesabının silinmesini istersen yukarıdaki adrese yaz. Kimliğini doğrulamamız için takma adını ve oyundaki davet kodunu ekle. Talebini en geç 30 gün içinde yerine getiririz.</li>
-      <li>Oyunu silmek cihazdaki tüm oyun verilerini de siler (cihaz yedeği 6. bölümde anlatıldığı gibi senin kontrolündedir).</li>
+      <li><strong>E-posta:</strong> Kazıcı adı kartında ya da Ayarlar &gt; Hesap ve yedek’te e-posta ekleyebilirsin. E-posta yalnızca ilerlemeni yedeklemek ve yeni bir cihazda hesabına dönmek için kullanılır; onay bağlantısı ve tek kullanımlık giriş kodları Supabase üzerinden e-postayla gönderilir.</li>
+      <li><strong>Google (yalnızca Android):</strong> Google hesabını bağlarsan Google kullanıcı kimliğin ve e-posta adresin oyun hesabına eklenir; şifren bize hiçbir zaman ulaşmaz.</li>
+    </ul>
+    <p>E-postanı pazarlama için kullanmayız, kimseyle paylaşmayız ve diğer oyunculara göstermeyiz.</p>
+
+    <h2><span class="n">4</span>Bulut kaydı ve cihaz yedeği</h2>
+    <p>Hesabına e-posta ya da Google bağlıysa oyun kaydın (bölümler, eşyalar, bakiyeler ve ayarlar) sunucumuzda (Supabase, Avrupa) saklanır ve oynadıkça güncellenir. Yeni bir cihazda <em>Ayarlar &gt; Hesap ve yedek &gt; İlerlemeyi geri yükle</em> ile e-postana gelen bağlantı ya da kodla geri gelir. Hesabına e-posta ya da Google bağlı değilse kaydın sunucuya gönderilmez.</p>
+    <p>Bunun dışında iPhone’un iCloud cihaz yedeği ve Android yedeklemesi (Google Drive) cihazdaki oyun verisini yedekleyebilir; bu yedekler Apple ya da Google’da, senin kontrolündedir ve biz göremeyiz. iPhone’da Ayarlar &gt; Apple kimliği &gt; iCloud’dan, Android’de Ayarlar &gt; Sistem &gt; Yedekleme’den yönetebilirsin.</p>
+
+    <h2><span class="n">5</span>Oyun ölçümleri (analitik)</h2>
+    <p>Oyun ilk açılışta seni tanımlamayan rastgele bir <strong>kurulum kimliği</strong> oluşturur. “Oyun ölçümleri”ne onay verirsen bu kimlikle şunlar analiz hizmetimiz <strong>PostHog</strong>’a (Avrupa Birliği sunucuları) gönderilir:</p>
+    <ul>
+      <li>Oyun olayları: oynanan bölüm, hamle ve sonuç, ödül ve güçlendirici kullanımı, alınan ürünler ve toplam harcama tutarı (ödeme bilgisi olmadan);</li>
+      <li>Hata ve çökme kayıtları;</li>
+      <li>Cihaz bilgisi: cihaz modeli, işletim sistemi sürümü, oyun sürümü ve dil.</li>
+    </ul>
+    <p>Bu bilgileri yalnızca oyunu iyileştirmek için kullanırız: zor bölümleri dengelemek, hataları bulmak ve hangi özelliklerin sevildiğini anlamak. Ölçümler oyun hesabına, kazıcı adına ya da e-postana bağlanmaz; hesap kimliğini ölçümlere göndermeyiz. Onay vermezsen olaylar yalnızca cihazında kalır. Hizmet sağlayıcılar bağlantı sırasında IP adresini teknik olarak işleyebilir; biz IP adresini oyun hesabına kaydetmeyiz.</p>
+    <p>Hukuki dayanak: oyun ölçümleri ve kişiselleştirilmiş reklam için açık rızan; oyunun, satın almaların, oyun hesabının ve bulut kaydının çalışması için hizmetin sunulması (sözleşmenin ifası).</p>
+
+    <h2><span class="n">6</span>Reklamlar</h2>
+    <p>Dig Age’de zorunlu reklam yoktur. İsteğe bağlı ödüllü reklamlar <strong>Unity Ads</strong> ile gösterilir. Reklamlar yalnızca “Kişisel reklam”a onay verirsen (iPhone’da ayrıca uygulama izleme izni verirsen) ilgi alanlarına göre kişiselleştirilir; aksi hâlde kişiselleştirilmez. Android’de reklam kimliğini Ayarlar &gt; Gizlilik &gt; Reklamlar’dan silebilir ya da sıfırlayabilirsin. Unity, reklamı göstermek ve ölçmek için cihaz bilgilerini <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">kendi gizlilik politikasına</a> göre işler.</p>
+
+    <h2><span class="n">7</span>Satın almalar ve bildirimler</h2>
+    <p>Oyun içi satın almalar isteğe bağlıdır. Ödemeleri iPhone’da <strong>Apple</strong> (App Store), Android’de <strong>Google</strong> (Google Play) işler. Oyun kart ya da ödeme bilgilerini hiçbir zaman görmez; yalnızca hangi ürünün alındığını öğrenir. Bildirimler cihazında planlanır; bunun için sunucumuza veri gönderilmez ve izin vermek isteğe bağlıdır.</p>
+
+    <h2 id="silme"><span class="n">8</span>Saklama ve hesabı silme</h2>
+    <ul>
+      <li><strong>Uygulama içinden silme:</strong> Ayarlar &gt; Hesap ve yedek &gt; Hesabımı sil. Onayladığında oyun hesabın ve sunucudaki tüm verilerin (kazıcı adı, birlik üyeliği, istek ve hediyeler, davetler, turnuva kayıtları, bulut kaydı ve e-posta) hemen ve kalıcı olarak silinir. Birliğin lideriysen liderlik başka bir üyeye geçer; son üyeysen birlik kapanır. Cihazdaki oyun ilerlemen kalır.</li>
+      <li><strong>Uygulamaya erişemiyorsan:</strong> yukarıdaki adrese kazıcı adını ve oyundaki davet kodunu yaz; talebini en geç 30 gün içinde yerine getiririz. Ayrıntılar: <a href="delete.html">hesap silme sayfası</a>.</li>
+      <li>Oyun hesabı, sen silene kadar saklanır. Hesaba bağlı olmayan ölçüm verileri en fazla 24 ay saklanır, sonra silinir.</li>
+      <li>Oyunu silmek cihazdaki tüm oyun verilerini siler; sunucudaki hesabı silmez (yukarıdaki yollarla silebilirsin).</li>
     </ul>
 
     <h2><span class="n">9</span>Hakların</h2>
-    <p>KVKK (6698 sayılı Kanun, md. 11) ve Avrupa’daki oyuncular için GDPR kapsamında; verilerine erişme, düzeltilmesini ya da silinmesini isteme, işlenmesine itiraz etme ve verdiğin onayı geri çekme hakların vardır. Onayını Ayarlar &gt; Gizlilik tercihleri’nden tek dokunuşla geri çekebilirsin. Talebini yanıtlamamızdan memnun kalmazsan Kişisel Verileri Koruma Kurumu’na ya da ülkendeki veri koruma otoritesine başvurabilirsin.</p>
+    <p>KVKK (6698 sayılı Kanun, md. 11) ve Avrupa’daki oyuncular için GDPR kapsamında; verilerine erişme, düzeltilmesini ya da silinmesini isteme, işlenmesine itiraz etme ve verdiğin onayı geri çekme hakların vardır. Ölçüm ve reklam onaylarını Ayarlar &gt; Gizlilik tercihleri’nden istediğin zaman ayrı ayrı değiştirebilirsin. Talebini yanıtlamamızdan memnun kalmazsan Kişisel Verileri Koruma Kurumu’na ya da ülkendeki veri koruma otoritesine başvurabilirsin.</p>
 
     <h2><span class="n">10</span>Hizmet sağlayıcılar ve yurt dışı aktarım</h2>
     <p>Oyunu çalıştırmak için aşağıdaki hizmetleri kullanırız. Sunucuları Türkiye dışında olduğundan verilerin bu ülkelere aktarılır; aktarım yalnızca bu politikadaki amaçlarla ve sağlayıcıların kendi veri koruma güvenceleri altında yapılır.</p>
@@ -164,11 +178,11 @@
       <table>
         <thead><tr><th>Hizmet</th><th>Ne için</th><th>Konum</th></tr></thead>
         <tbody>
-          <tr><td>PostHog</td><td>Oyun ölçümleri (yalnızca onayla)</td><td>Avrupa Birliği</td></tr>
-          <tr><td>Supabase</td><td>Kazı Birlikleri, turnuvalar, davetler</td><td>Avrupa Birliği</td></tr>
+          <tr><td>Supabase</td><td>Oyun hesabı ve kazıcı adı, birlikler, turnuvalar, davetler, e-postayla giriş ve doğrulama postaları, bulut kaydı</td><td>Avrupa Birliği</td></tr>
+          <tr><td>PostHog</td><td>Oyun ölçümleri ve hata kayıtları (yalnızca onayla)</td><td>Avrupa Birliği</td></tr>
           <tr><td>Unity Ads</td><td>İsteğe bağlı ödüllü reklamlar</td><td>ABD ve diğer</td></tr>
-          <tr><td>Apple</td><td>iPhone’da satın almalar, iCloud yedeği, bildirimler</td><td>ABD ve diğer</td></tr>
-          <tr><td>Google</td><td>Android’de satın almalar (Google Play), Android yedeklemesi, bildirimler</td><td>ABD ve diğer</td></tr>
+          <tr><td>Apple</td><td>iPhone’da satın almalar, bildirimler, iCloud cihaz yedeği</td><td>ABD ve diğer</td></tr>
+          <tr><td>Google</td><td>Android’de satın almalar (Google Play), Google ile bağlama (isteğe bağlı), Android yedeklemesi, bildirimler</td><td>ABD ve diğer</td></tr>
         </tbody>
       </table>
     </div>
@@ -183,13 +197,15 @@
   <!-- ============================ ENGLISH ============================ -->
   <article id="en" lang="en" hidden>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: October 14, 2026 · Applies to the iOS (App Store) and Android (Google Play) versions of “Dig Age”.</p>
+    <p class="meta">Last updated: October 17, 2026 · Applies to the iOS (App Store) and Android (Google Play) versions of “Dig Age”.</p>
 
     <div class="summary">
       <strong>In short</strong>
       <ul>
-        <li>We never ask for your name, e-mail or phone number. We do not access your location, contacts, photos or microphone.</li>
-        <li>Gameplay measurements are sent only if you tap “Accept”. You can change your choice anytime in Settings &gt; Privacy preferences.</li>
+        <li>After the first level you pick a public <strong>digger name</strong>, and a game account is created for teams, tournaments and rankings. Please do not use your real name.</li>
+        <li><strong>Email is optional</strong> and only used to back up your progress and get back into your account on a new device. We do not access your location, contacts, photos or microphone.</li>
+        <li>Game measurements and personalised ads are only on if you allow them, and you can choose them <strong>separately</strong> (Settings &gt; Privacy preferences).</li>
+        <li>You can delete your account and all your data on our server at any time in the game with <strong>Settings &gt; Account &amp; backup &gt; Delete my account</strong>.</li>
         <li>We do not sell your data.</li>
       </ul>
     </div>
@@ -198,51 +214,53 @@
     <p>Dig Age is a mobile game developed by the independent developer Kemal Eyüp Çam, who is the data controller under this policy. For any privacy question, request or deletion request, write to:</p>
     <div class="contact"><code class="email">kemaleyupcam@icloud.com</code><button type="button" class="copy">Copy</button></div>
 
-    <h2><span class="n">2</span>What we collect</h2>
-    <p>On first launch the game creates a random <strong>install ID</strong>. It does not identify you, and a new one is created if you reinstall the game. Together with this ID we record:</p>
+    <h2><span class="n">2</span>Game account and digger name</h2>
+    <p>After you finish the first level and make your privacy choice, you pick a <strong>digger name</strong>. For this, a game account with a random user ID is created for you with <strong>Supabase</strong> (European servers). The account holds:</p>
     <ul>
-      <li>Gameplay events: levels played, moves and results, reward and booster use, and which item was bought (without any payment details).</li>
-      <li>Device information: device model, OS version, game version and language.</li>
-    </ul>
-    <p>Data for Teams and tournaments is described in section 7, and data used for ads in section 4.</p>
-
-    <h2><span class="n">3</span>Why we use it, and analytics</h2>
-    <p>We use this information only to improve the game: balancing hard levels, finding bugs and learning which features players enjoy.</p>
-    <ul>
-      <li>If you choose <strong>“Accept”</strong>, measurements are sent to our analytics service <strong>PostHog</strong> (European Union servers). Without a connection they wait on the device and are retried later.</li>
-      <li>If you choose <strong>“Essentials only”</strong>, events stay on your device and are never sent.</li>
-    </ul>
-    <p>Legal basis: your consent for analytics and personalised ads; performance of the service for running the game, purchases and team features.</p>
-
-    <h2><span class="n">4</span>Ads</h2>
-    <p>Dig Age has no forced ads. Optional rewarded ads are shown through <strong>Unity Ads</strong>. Ads are personalised only if you give consent (and, on iPhone, also allow app tracking); otherwise they are not personalised. On Android you can delete or reset your advertising ID in Settings &gt; Privacy &gt; Ads. Unity processes device information to show and measure ads under <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">its own privacy policy</a>.</p>
-
-    <h2><span class="n">5</span>Purchases</h2>
-    <p>In-app purchases are optional. Payments are handled by <strong>Apple</strong> (App Store) on iPhone and by <strong>Google</strong> (Google Play) on Android. The game never sees your card or payment details; it only learns which item was bought. On iPhone you can bring back earlier purchases with “Restore purchases” in Settings; on Android they come back automatically with your Google account.</p>
-
-    <h2><span class="n">6</span>Device backup</h2>
-    <p>So that you do not lose your progress when you change phones, your save is backed up: on iPhone to the <strong>iCloud</strong> storage of your Apple Account, on Android to the <strong>Android backup</strong> (Google Drive) of your Google account. Only you and Apple or Google hold this backup; we cannot see it. You can turn it off in iPhone Settings &gt; Apple Account &gt; iCloud, or in Android Settings &gt; System &gt; Backup.</p>
-
-    <h2><span class="n">7</span>Teams and tournaments</h2>
-    <p>When you join a team, ask for lives or moves, or enter a tournament, an <strong>anonymous game account</strong> is created for you; no e-mail or password is needed. This account and the following are stored with <strong>Supabase</strong> (European servers):</p>
-    <ul>
-      <li>The nickname and emblem you choose, your level and team membership;</li>
-      <li>Life and move requests and gifts, and activity in the team feed;</li>
-      <li>Weekly expedition and tournament scores, and your invite codes;</li>
+      <li>Your digger name (unique) and emblem, your level, dig count and when you were last seen;</li>
+      <li>Your team membership, life and move requests and gifts, and activity in the team feed;</li>
+      <li>Weekly expedition and tournament scores, your invite code and invites;</li>
       <li>Reports you make about a player or a team.</li>
     </ul>
-    <p>Your nickname, emblem, level and scores are visible to other players. Please do not use your real name or personal details as a nickname. Inappropriate names may be changed or removed after a report.</p>
+    <p>Your digger name, emblem, level and scores are visible to other players. Please do not use your real name or personal details as a digger name; inappropriate names may be changed or removed after a report. This account is needed for teams, tournaments and rankings and does not depend on your measurement choice (legal basis: performance of the service).</p>
 
-    <h2><span class="n">8</span>Retention and deletion</h2>
+    <h2><span class="n">3</span>Email and Google linking (optional)</h2>
     <ul>
-      <li>Analytics data is kept for at most 24 months and then deleted.</li>
-      <li>Your team account is kept while you use the game. You can leave a team in the game at any time.</li>
-      <li>To have sent data or your team account deleted, write to the address above. Include your nickname and your in-game invite code so we can verify it is you. We act on requests within 30 days.</li>
-      <li>Uninstalling the game deletes all game data on your device (the device backup stays under your control, as described in section 6).</li>
+      <li><strong>Email:</strong> you can add an email on the digger name card or in Settings &gt; Account &amp; backup. It is used only to back up your progress and to get back into your account on a new device; the confirmation link and one-time sign-in codes are sent by email through Supabase.</li>
+      <li><strong>Google (Android only):</strong> if you link your Google account, your Google user ID and email address are added to your game account; your password never reaches us.</li>
+    </ul>
+    <p>We never use your email for marketing, share it with anyone, or show it to other players.</p>
+
+    <h2><span class="n">4</span>Cloud save and device backup</h2>
+    <p>If your account has an email or Google linked, your game save (levels, items, balances and settings) is stored on our server (Supabase, Europe) and updated as you play. On a new device it comes back via <em>Settings &gt; Account &amp; backup &gt; Restore progress</em>, using the link or code sent to your email. If no email or Google is linked, your save is not sent to the server.</p>
+    <p>Separately, iPhone’s iCloud device backup and Android backup (Google Drive) may back up the game data on your device; these backups are held by Apple or Google under your control and we cannot see them. You can manage them in iPhone Settings &gt; Apple Account &gt; iCloud, or in Android Settings &gt; System &gt; Backup.</p>
+
+    <h2><span class="n">5</span>Game measurements (analytics)</h2>
+    <p>On first launch the game creates a random <strong>install ID</strong> that does not identify you. If you allow “Game measurements”, the following is sent with this ID to our analytics service <strong>PostHog</strong> (European Union servers):</p>
+    <ul>
+      <li>Gameplay events: levels played, moves and results, reward and booster use, items bought and total amount spent (without any payment details);</li>
+      <li>Error and crash logs;</li>
+      <li>Device information: device model, OS version, game version and language.</li>
+    </ul>
+    <p>We use this only to improve the game: balancing hard levels, finding bugs and learning which features players enjoy. Measurements are not linked to your game account, digger name or email; we do not send your account ID to analytics. Without your consent, events stay on your device. Service providers may technically process your IP address when you connect; we do not store IP addresses with your game account.</p>
+    <p>Legal basis: your consent for game measurements and personalised ads; performance of the service for running the game, purchases, the game account and cloud save.</p>
+
+    <h2><span class="n">6</span>Ads</h2>
+    <p>Dig Age has no forced ads. Optional rewarded ads are shown through <strong>Unity Ads</strong>. Ads are personalised only if you allow “Personalised ads” (and, on iPhone, also allow app tracking); otherwise they are not personalised. On Android you can delete or reset your advertising ID in Settings &gt; Privacy &gt; Ads. Unity processes device information to show and measure ads under <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" rel="noopener">its own privacy policy</a>.</p>
+
+    <h2><span class="n">7</span>Purchases and notifications</h2>
+    <p>In-app purchases are optional. Payments are handled by <strong>Apple</strong> (App Store) on iPhone and by <strong>Google</strong> (Google Play) on Android. The game never sees your card or payment details; it only learns which item was bought. Notifications are scheduled on your device; no data is sent to our server for them, and allowing them is optional.</p>
+
+    <h2 id="delete"><span class="n">8</span>Retention and deleting your account</h2>
+    <ul>
+      <li><strong>In the app:</strong> Settings &gt; Account &amp; backup &gt; Delete my account. Once you confirm, your game account and all your data on our server (digger name, team membership, requests and gifts, invites, tournament entries, cloud save and email) are deleted immediately and permanently. If you lead a team, leadership passes to another member; if you are the last member, the team is closed. Your game progress on the device stays.</li>
+      <li><strong>If you can’t open the app:</strong> write to the address above with your digger name and in-game invite code; we act on requests within 30 days. Details: <a href="delete.html">account deletion page</a>.</li>
+      <li>Your game account is kept until you delete it. Measurement data that is not linked to an account is kept for at most 24 months and then deleted.</li>
+      <li>Uninstalling the game deletes all game data on your device; it does not delete your server account (use the options above).</li>
     </ul>
 
     <h2><span class="n">9</span>Your rights</h2>
-    <p>Under the GDPR (for players in Europe), Turkey’s KVKK and similar laws, you have the right to access your data, ask for it to be corrected or deleted, object to its processing and withdraw your consent. You can withdraw consent with one tap in Settings &gt; Privacy preferences. If you are not satisfied with our answer, you can complain to your local data protection authority.</p>
+    <p>Under the GDPR (for players in Europe), Turkey’s KVKK and similar laws, you have the right to access your data, ask for it to be corrected or deleted, object to its processing and withdraw your consent. You can change your measurement and ad choices separately at any time in Settings &gt; Privacy preferences. If you are not satisfied with our answer, you can complain to your local data protection authority.</p>
 
     <h2><span class="n">10</span>Service providers and international transfers</h2>
     <p>We use the services below to run the game. Their servers are outside Turkey, so your data is transferred to these countries, only for the purposes in this policy and under each provider’s own data protection safeguards.</p>
@@ -250,11 +268,11 @@
       <table>
         <thead><tr><th>Service</th><th>Used for</th><th>Location</th></tr></thead>
         <tbody>
-          <tr><td>PostHog</td><td>Gameplay measurements (only with consent)</td><td>European Union</td></tr>
-          <tr><td>Supabase</td><td>Teams, tournaments, invites</td><td>European Union</td></tr>
+          <tr><td>Supabase</td><td>Game account and digger name, teams, tournaments, invites, email sign-in and confirmation emails, cloud save</td><td>European Union</td></tr>
+          <tr><td>PostHog</td><td>Game measurements and error logs (only with consent)</td><td>European Union</td></tr>
           <tr><td>Unity Ads</td><td>Optional rewarded ads</td><td>USA and others</td></tr>
-          <tr><td>Apple</td><td>Purchases, iCloud backup and notifications on iPhone</td><td>USA and others</td></tr>
-          <tr><td>Google</td><td>Purchases (Google Play), Android backup and notifications on Android</td><td>USA and others</td></tr>
+          <tr><td>Apple</td><td>Purchases, notifications and iCloud device backup on iPhone</td><td>USA and others</td></tr>
+          <tr><td>Google</td><td>Purchases (Google Play), Google linking (optional), Android backup and notifications on Android</td><td>USA and others</td></tr>
         </tbody>
       </table>
     </div>
@@ -305,3 +323,5 @@
     }
   })();
 </script>
+</body>
+</html>
